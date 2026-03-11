@@ -3,7 +3,7 @@ node {
 
     // Build stage
     stage("Build") {
-        docker.image('lorisleiva/laravel-docker:8.2').inside('-u root') {
+        docker.image('lorisleiva/laravel-docker:8.4').inside('-u root') {
             sh 'rm -f composer.lock'
             sh 'composer install'
         }
