@@ -3,7 +3,7 @@ node {
 
     // Build stage
     stage("Build") {
-        docker.image('shippingdocker/php-composer:7.4').inside('-u root') {
+        docker.image('lorisleiva/laravel-docker:8.2').inside('-u root') {
             sh 'rm -f composer.lock'
             sh 'composer install'
         }
